@@ -6,8 +6,11 @@
 
 ## HOW TO UPDATE WHEN HAVE NEW VERSION
 * Type in cmd
+* 
 > node update.js
+
 or
+
 > npm update
 
 ## CONTACT
