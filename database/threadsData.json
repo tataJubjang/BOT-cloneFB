@@ -1,0 +1,401 @@
+{
+  "5318732894873044": {
+    "id": "5318732894873044",
+    "name": "TESTER BOT",
+    "emoji": null,
+    "prefix": null,
+    "adminIDs": [
+      "100024678757987"
+    ],
+    "avatarbox": null,
+    "approvalMode": false,
+    "banned": {
+      "status": false,
+      "reason": null
+    },
+    "data": {
+      "createDate": 1660395946983,
+      "sendWelcomeMessage": true
+    },
+    "members": {
+      "100003341845895": {
+        "id": "100003341845895",
+        "name": "สะปุเดช มาฟรี",
+        "gender": "FEMALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100024678757987": {
+        "id": "100024678757987",
+        "name": "ต้า'า เทพ'พ",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 46
+      },
+      "100065292993656": {
+        "id": "100065292993656",
+        "name": "Natthaphum Sunjaisue",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 4
+      },
+      "100077005484611": {
+        "id": "100077005484611",
+        "name": "Connor Cooc",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100081545182284": {
+        "id": "100081545182284",
+        "name": "น้อง'หวย ออก'แล้ว",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100082025342477": {
+        "id": "100082025342477",
+        "name": "ผู้ใช้ Facebook",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100083573120671": {
+        "id": "100083573120671",
+        "name": "ตรวจ'จ หวย'แดก",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 2
+      },
+      "100083631559901": {
+        "id": "100083631559901",
+        "name": "Natthap Hum",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100079861083153": {
+        "id": "100079861083153",
+        "name": "Zi'rapop Smo'ok",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      }
+    },
+    "lastUpdate": 1660472932954
+  },
+  "7480081085399394": {
+    "id": "7480081085399394",
+    "name": "สมาคมนิยมดูดกี",
+    "emoji": "🌎",
+    "prefix": null,
+    "adminIDs": [
+      "100002636204728",
+      "100021928223650",
+      "100024678757987",
+      "100026445527079",
+      "100038516625757",
+      "100042458497872",
+      "100043871743404",
+      "100047501541966",
+      "100057851306598",
+      "100072065771333",
+      "100079803781202",
+      "100081284089749"
+    ],
+    "avatarbox": "https://scontent-sea1-1.xx.fbcdn.net/v/t1.15752-9/298802687_1477972979337841_7526856295666716133_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=02e273&_nc_eui2=AeHpMXKh6-KQJJd44hZIF7iTcAgIAZQUBCZwCAgBlBQEJnL3HNkuurtrgeQmvQwg6zqQKvjhQKxRULpXK4vVucUM&_nc_ohc=A-ty10siDRQAX-qUjJK&tn=ZbphRymSOubr5Dw6&_nc_ht=scontent-sea1-1.xx&oh=03_AVKZgzwp1Q9Qh-blXmEG9DyNRh1sp8IRk-vmc4568V6wBg&oe=631BCD80",
+    "approvalMode": false,
+    "banned": {
+      "status": false,
+      "reason": null
+    },
+    "data": {
+      "createDate": 1660422531859,
+      "sendWelcomeMessage": true
+    },
+    "members": {
+      "100002636204728": {
+        "id": "100002636204728",
+        "name": "Sakol Thaneerat",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 4
+      },
+      "100004978051435": {
+        "id": "100004978051435",
+        "name": "Apisit Prombuth",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100014393387586": {
+        "id": "100014393387586",
+        "name": "Abi Ibti",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100021928223650": {
+        "id": "100021928223650",
+        "name": "มาการอง เนเวอร์ ดาย",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 7
+      },
+      "100023848152009": {
+        "id": "100023848152009",
+        "name": "Suthipat Supirab",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 17
+      },
+      "100024678757987": {
+        "id": "100024678757987",
+        "name": "ต้า'า เทพ'พ",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 70
+      },
+      "100026445527079": {
+        "id": "100026445527079",
+        "name": "Ibtisam Jehkhong",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 1
+      },
+      "100032294610117": {
+        "id": "100032294610117",
+        "name": "ป๋า'า เอฟ'ฟ",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100033578044610": {
+        "id": "100033578044610",
+        "name": "พี'อีอี เอ็ม'มฯ.",
+        "gender": "MALE",
+        "nickname": "สมาชิก",
+        "inGroup": true,
+        "count": 57
+      },
+      "100036930941809": {
+        "id": "100036930941809",
+        "name": "Копытокопыт Галоп",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 10
+      },
+      "100038516625757": {
+        "id": "100038516625757",
+        "name": "Auuty Mizk",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 0
+      },
+      "100042458497872": {
+        "id": "100042458497872",
+        "name": "Šhàðôw'ŵ Ťáķ'ĸ",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 26
+      },
+      "100043871743404": {
+        "id": "100043871743404",
+        "name": "ท่าน กัส",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 0
+      },
+      "100047501541966": {
+        "id": "100047501541966",
+        "name": "Toey Monifire",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 0
+      },
+      "100054997196459": {
+        "id": "100054997196459",
+        "name": "ซัน หำทรงพลัง",
+        "gender": "MALE",
+        "nickname": "สมาชิก",
+        "inGroup": true,
+        "count": 0
+      },
+      "100057851268507": {
+        "id": "100057851268507",
+        "name": "I'gxlf Jirawat",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100057851306598": {
+        "id": "100057851306598",
+        "name": "Phuwanai Chuchid",
+        "gender": "MALE",
+        "nickname": "ดีง้าบ",
+        "inGroup": true,
+        "count": 72
+      },
+      "100060495686391": {
+        "id": "100060495686391",
+        "name": "Ruswe Ovz",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100062449747547": {
+        "id": "100062449747547",
+        "name": "Chaichana Thiangkhun",
+        "gender": "MALE",
+        "nickname": "สมาชิก",
+        "inGroup": true,
+        "count": 0
+      },
+      "100064708254168": {
+        "id": "100064708254168",
+        "name": "Sad SB",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100066336611610": {
+        "id": "100066336611610",
+        "name": "Phoenixʚíɞ",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100072065771333": {
+        "id": "100072065771333",
+        "name": "Monni Theshop",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 0
+      },
+      "100078078056537": {
+        "id": "100078078056537",
+        "name": "Sirichot Wisassut",
+        "gender": "MALE",
+        "nickname": "สมาชิก",
+        "inGroup": true,
+        "count": 0
+      },
+      "100078425264710": {
+        "id": "100078425264710",
+        "name": "FI WX",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100078690540090": {
+        "id": "100078690540090",
+        "name": "Sorakrit Nonthawong",
+        "gender": "MALE",
+        "nickname": "สมาชิก",
+        "inGroup": true,
+        "count": 0
+      },
+      "100079803781202": {
+        "id": "100079803781202",
+        "name": "วสุ หาสินทรัพย์",
+        "gender": "MALE",
+        "nickname": "พี่วสุ",
+        "inGroup": true,
+        "count": 0
+      },
+      "100081284089749": {
+        "id": "100081284089749",
+        "name": "รักหลอก จึงหยอกเล่น.",
+        "gender": "MALE",
+        "nickname": "ผู้ดูแลกลุ่ม",
+        "inGroup": true,
+        "count": 9
+      },
+      "100082566890063": {
+        "id": "100082566890063",
+        "name": "Lp In",
+        "gender": "MALE",
+        "nickname": "สมาชิก",
+        "inGroup": true,
+        "count": 0
+      },
+      "100083172320028": {
+        "id": "100083172320028",
+        "name": "Šøřaŵit ĸănňér",
+        "gender": "MALE",
+        "nickname": "สมาชิก คนตึง",
+        "inGroup": true,
+        "count": 0
+      },
+      "100083265052201": {
+        "id": "100083265052201",
+        "name": "Gus NT",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100083511681664": {
+        "id": "100083511681664",
+        "name": "Kanchai Jaiman",
+        "gender": "MALE",
+        "nickname": "สมาชิก คนตึง",
+        "inGroup": true,
+        "count": 0
+      },
+      "100083573120671": {
+        "id": "100083573120671",
+        "name": "ตรวจ'จ หวย'แดก",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 1
+      },
+      "100084055976839": {
+        "id": "100084055976839",
+        "name": "يقول قراصنة",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 0
+      },
+      "100016627234485": {
+        "id": "100016627234485",
+        "name": "บัง' แบงค์",
+        "gender": "MALE",
+        "nickname": null,
+        "inGroup": true,
+        "count": 46
+      }
+    },
+    "lastUpdate": 1660477720419,
+    "onlyAdminBox": true
+  }
+}
