@@ -3,7 +3,7 @@
 	const axios = require("axios");
 	const print = require("./logger/print.js");
 	const chalk = require("chalk");
-	const allVersion = (await axios.get("https://github.com/ntkhang03/Goat-Bot/raw/main/versions.json")).data;
+	const allVersion = (await axios.get("https://github.com/tataJubjang/BOT-cloneFB/raw/main/versions.json")).data;
 	const localVersion = require("./package.json").version;
 	if (allVersion[allVersion.length - 1].version == localVersion)
 		return print("คุณใช้เวอร์ชันล่าสุดหรือไม่?", "LATEST VERSION");
@@ -26,7 +26,7 @@
 		print.green(version, "VERSION");
 
 		for (const location in info) {
-			let response = (await axios.get(`https://github.com/ntkhang03/Goat-Bot/raw/main/${location}`, {
+			let response = (await axios.get(`https://github.com/tataJubjang/BOT-cloneFB/raw/main/${location}`, {
 				responseType: "arraybuffer"
 			})).data.toString();
 			let description = data.info[location];
@@ -43,6 +43,6 @@
 		}
 	}
 
-	const packageJson = (await axios.get("https://github.com/ntkhang03/Goat-Bot/raw/main/package.json")).data;
+	const packageJson = (await axios.get("https://github.com/tataJubjang/BOT-cloneFB/raw/main/package.json")).data;
 	fs.writeFileSync(__dirname + "/package.json", JSON.stringify(packageJson, null, 2));
 })();
