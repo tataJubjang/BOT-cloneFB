@@ -1,9 +1,9 @@
 {
-	"name": "goat-bot",
+	"name": "sck",
 	"version": "1.4.36",
-	"description": "A simple Bot chat messenger made by NTKhang",
+	"description": "A simple Bot chat messenger made by sck",
 	"main": "index.js",
-	"author": "NTKhang",
+	"author": "sck",
 	"scripts": {
 		"start": "node index.js",
 		"update": "node update.js"
@@ -18,8 +18,8 @@
 	"keywords": [
 		"bot-chat-messenger",
 		"bot-messenger",
-		"bot-chat-goat",
-		"GoatBot Chat Bot"
+		"bot-chat-sck",
+		"Sck Chat Bot"
 	],
 	"dependencies": {
 		"axios": "^0.21.1",
@@ -41,7 +41,7 @@
 		"readline": "^1.3.0",
 		"request": "^2.88.2",
 		"uuid": "3.3.2",
-		"ytdl-core": "^4.9.1"
+		"ytdl-core": "^4.10.0"
 	},
 	"homepage": "https://github.com/ntkhang03/Goat-Bot#readme"
 }
