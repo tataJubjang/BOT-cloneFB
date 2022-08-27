@@ -38,7 +38,7 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 					});
 				}
 				catch (err) {
-					print.err("เกิดข้อผิดพลาดขณะดำเนินการ commamd whenChat at command " + command.config.name + ", ข้อผิดพลาด: " + err.stack, "WHEN CHAT");
+					print.err("เกิดข้อผิดพลาดขณะดำเนินการ commamd whenChat at command" + command.config.name + ", ข้อผิดพลาด: " + err.stack, "WHEN CHAT");
 				}
 			}
 		}
@@ -84,7 +84,7 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 			if (!command) return message.reply(`Lệnh ${commandName ? `'${commandName}'` : 'คุณใช้'} ไม่มีอยู่ พิมพ์ ${prefix}help เพื่อดูคำสั่งที่มีอยู่ทั้งหมด`);
 			//============================================//
 			// ————————————— COMMAND BANNED ————————————— //
-			if (client.commandBanned[commandName]) return message.reply(`คำสั่ง ${commandName} ถูกห้ามโดยผู้ดูแลระบบจากระบบบอทด้วยเหตุผล: ${client.commandBanned[commandName]}`);
+			if (client.commandBanned[commandName]) return message.reply(`สั่งการ ${commandName} โดนแอดมินห้ามไม่ให้ใช้ระบบบอทด้วยเหตุผล: ${client.commandBanned[commandName]}`);
 			// ————————————— CHECK PERMISSION ———————————— //
 			const needRole = command.config.role || 0;
 			const adminBox = threadInfo.adminIDs || [];
@@ -94,14 +94,15 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 					0;
 
 			if (needRole > role && needRole == 1) return message.reply(`เฉพาะผู้ดูแลระบบของกลุ่มแชทเท่านั้นที่สามารถใช้คำสั่ง '${commandName}'`);
-			if (needRole > role && needRole == 2) return message.reply(`บอทผู้ดูแลระบบเท่านั้นที่สามารถใช้คำสั่ง'${commandName}'`);
+			if (needRole > role && needRole == 2) return message.reply(`บอทผู้ดูแลระบบเท่านั้นที่สามารถใช้คำสั่ง '${commandName}'`);
 			// ———————————————— COOLDOWNS ———————————————— //
 			if (!client.cooldowns[commandName]) client.cooldowns[commandName] = {};
 			const timestamps = client.cooldowns[commandName];
+			const configCommand = command.config;
 			const cooldownCommand = (command.config.cooldowns || 1) * 1000;
 			if (timestamps[senderID]) {
 				const expirationTime = timestamps[senderID] + cooldownCommand;
-				if (dateNow < expirationTime) return message.reply(`⏱ คุณกำลังรอที่จะใช้คำสั่งนี้ โปรดกลับมาใหม่ภายหลัง ${((expirationTime - dateNow) / 1000).toString().slice(0, 3)}s`);
+				if (dateNow < expirationTime) return message.reply(`⏱คุณกำลังรอที่จะใช้คำสั่งนี้ โปรดกลับมาใหม่ภายหลัง  ${((expirationTime - dateNow) / 1000).toString().slice(0, 3)}s`);
 			}
 			// ——————————————— RUN COMMAND ——————————————— //
 			try {
@@ -116,12 +117,12 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 						body: guide
 					};
 					const msg = '\n───────────────\n'
-						+ '» คำแนะนำสำหรับการใช้งาน:\n'
+						+ '» คำแนะนำในการใช้งาน:\n'
 						+ guide.body
 							.replace(/\{prefix\}|\{p\}/g, prefix)
 							.replace(/\{name\}|\{n\}/g, configCommand.name)
 						+ '\n───────────────\n'
-						+ '» บันทึก:\n• เนื้อหาภายใน <XXXXX> เปลี่ยนแปลงได้\n• เนื้อหาภายใน [a|b|c] คือ a หรือ b หรือ c';
+						+ '» บันทึก:\n• เนื้อหาภายใน <XXXXXX> เปลี่ยนแปลงได้\n• เนื้อหาภายใน [a|b|c] คือ a หรือ b หรือ c';
 
 					const formSendMessage = {
 						body: msg
@@ -138,15 +139,15 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 					}
 					message.reply(formSendMessage);
 				};
-				const time = moment.tz("Asia/Ho_Chi_Minh").format("DD/MM/YYYY HH:mm:ss");
+				const time = moment.tz("Asia/Bangkok").format("DD/MM/YYYY HH:mm:ss");
 				print(`${chalk.hex("#ffb300")(time)} | ${commandName} | ${senderID} | ${threadID} | ${args.join(" ")}`, "CALL CMD");
 				parameters.role = role;
 				command.start({ ...parameters, ...{ args } });
 				timestamps[senderID] = dateNow;
 			}
 			catch (err) {
-				print.err(`เกิดข้อผิดพลาดขณะรันคำสั่ง${commandName}, ข้อผิดพลาด: ${err.stack}`, "CALL COMMAND");
-				return message.reply(`❎\nError 420 ${commandName}\n${err.stack}`);
+				print.err(`เกิดข้อผิดพลาดขณะรันคำสั่ง ${commandName}, lỗi: ${err.stack}`, "CALL COMMAND");
+				return message.reply(`❎\nเกิดข้อผิดพลาดขณะดำเนินการคำสั่ง ${commandName}\n${err.stack}`);
 			}
 		}
 
@@ -167,7 +168,7 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 				};
 				message.guideCmd = async function () {
 					const formSendMessage = {
-						body: command.config.guide.replace(/\{prefix\}|\{p\}/g, prefix).replace(/\{name\}|\{n\}/g, commandName)
+						body: command.config.guide.replace(/\{prefix\}|\{p\}/g, prefix).replace(/\{name\}|\{n\}/g, command.config.name)
 					};
 					const { sendFile } = command.config;
 					if (sendFile &&
@@ -186,7 +187,7 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 			}
 			catch (err) {
 				print.err(`เกิดข้อผิดพลาดขณะดำเนินการคำสั่งตอบกลับที่ command ${Reply.nameCmd} ${err.stack}`, "WHEN REPLY");
-				message.reply(`❎\nเกิดข้อผิดพลาดที่ command  ${Reply.nameCmd}\n${err.stack}`);
+				message.reply(`❎\nเกิดข้อผิดพลาดขณะดำเนินการคำสั่ง  ${Reply.nameCmd}\n${err.stack}`);
 			}
 		}
 
@@ -206,7 +207,7 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 				};
 				message.guideCmd = async function () {
 					const formSendMessage = {
-						body: command.config.guide.replace(/\{prefix\}|\{p\}/g, prefix).replace(/\{name\}|\{n\}/g, commandName)
+						body: command.config.guide.replace(/\{prefix\}|\{p\}/g, prefix).replace(/\{name\}|\{n\}/g, command.config.name)
 					};
 					const { sendFile } = command.config;
 					if (sendFile &&
@@ -225,8 +226,8 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 				return;
 			}
 			catch (e) {
-				print.err(`เกิดข้อผิดพลาดขณะรันคำสั่ง React at command ${Reaction.nameCmd}: ${e.stack}`, "HANDLE REACTION");
-				message.reply(`❎\nเกิดข้อผิดพลาดที่ command Reaction ${Reaction.nameCmd}\n${err.stack}`);
+				print.err(`error command Reaction tại lệnh ${Reaction.nameCmd}: ${e.stack}`, "HANDLE REACTION");
+				message.reply(`❎\nเกิดข้อผิดพลาดที่คำสั่ง React ${Reaction.nameCmd}\n${e.stack}`);
 			}
 		}
 
@@ -240,13 +241,13 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 				if (!getEvent.config.type.includes(logMessageType)) continue;
 				if (getEvent.config.condition && !eval(getEvent.config.condition)) continue;
 				try {
-					const time = moment.tz("Asia/Ho_Chi_Minh").format("DD/MM/YYYY HH:mm:ss");
+					const time = moment.tz("Asia/Bangkok").format("DD/MM/YYYY HH:mm:ss");
 					print(`${chalk.hex("#ffb300")(time)} | Event: ${getEvent.config.name} | ${author} | ${threadID}`, "EVENT CMD");
 					getEvent.start({ event, api, globalGoat, usersData, threadsData, client, download, message });
 				}
 				catch (err) {
-					print.err(`เกิดข้อผิดพลาดที่เหตุการณ์คำสั่ง ${chalk.hex("#ff0000")(getEvent.config.name)}, ${err.stack}`, "EVENT COMMAND");
-					message.reply(`❎\nผิดพลาด command event ${getEvent.config.name}\n${err.stack}`)
+					print.err(`error command event ${chalk.hex("#ff0000")(getEvent.config.name)}, ${err.stack}`, "EVENT COMMAND");
+					message.reply(`❎\nเกิดข้อผิดพลาดที่ command event ${getEvent.config.name}\n${err.stack}`)
 				}
 			}
 		}
@@ -283,6 +284,6 @@ module.exports = function ({ api, globalGoat, client, usersData, threadsData, do
 			presence,
 			read_receipt,
 			typ
-		}
+		};
 	};
 };
