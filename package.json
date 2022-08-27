@@ -1,25 +1,25 @@
 {
-	"name": "sck",
-	"version": "1.4.36",
-	"description": "A simple Bot chat messenger made by sck",
+	"name": "lmw-bot",
+	"version": "1.4.38",
+	"description": "A simple Bot chat messenger made by lmwsck",
 	"main": "index.js",
-	"author": "sck",
+	"author": "lnwsck",
 	"scripts": {
 		"start": "node index.js",
 		"update": "node update.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ntkhang03/Goat-Bot.git"
+		"url": "git+https://github.com/tataJubjang/BOT-cloneFB.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ntkhang03/Goat-Bot/issues"
+		"url": "https://github.com/tataJubjang/BOT-cloneFB/issues"
 	},
 	"keywords": [
 		"bot-chat-messenger",
 		"bot-messenger",
-		"bot-chat-sck",
-		"Sck Chat Bot"
+		"bot-chat-lnwsck",
+		"lnwsck Chat Bot"
 	],
 	"dependencies": {
 		"axios": "^0.21.1",
@@ -32,8 +32,6 @@
 		"fb-chat-api": "latest",
 		"fb-tools": "",
 		"fs-extra": "^10.0.0",
-		"jimp": "^0.16.1",
-		"moment": "^2.29.4",
 		"moment-timezone": "^0.5.33",
 		"mongoose": "^5.13.7",
 		"path": "^0.12.7",
@@ -41,7 +39,7 @@
 		"readline": "^1.3.0",
 		"request": "^2.88.2",
 		"uuid": "3.3.2",
-		"ytdl-core": "^4.10.0"
+		"ytdl-core": "4.10.0"
 	},
-	"homepage": "https://github.com/ntkhang03/Goat-Bot#readme"
+	"homepage": "https://github.com/tataJubjang/BOT-cloneFB#readme"
 }
