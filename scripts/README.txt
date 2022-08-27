@@ -1,6 +1,1 @@
-- Không sửa đổi tên tệp, tên lệnh, version của bất kỳ tệp lệnh có sẵn nào nếu không muốn xảy ra lỗi.
-- Tắt chế độ tự động cập nhật commands ở file config.json, phần autoUpdateScript sửa thành false.
-- Không sửa đổi tên tác giả của bất kỳ tệp lệnh nào.
-- Không hỏi admin cách sửa lỗi của bất kỳ tệp lệnh nào bên ngoài.
-
->>Thanks for using<<
+- ห้ามแก้ไขชื่อไฟล์ ชื่อคำสั่ง เวอร์ชันของไฟล์คำสั่งที่มีอยู่ หากคุณไม่ต้องการให้เกิดข้อผิดพลาด - ปิดคำสั่งอัปเดตอัตโนมัติในไฟล์ config.json โดยตั้งค่า autoUpdateScript เป็นเท็จ - ห้ามแก้ไขชื่อผู้แต่งสคริปต์ใดๆ - อย่าถามผู้ดูแลระบบถึงวิธีการแก้ไขข้อผิดพลาดของสคริปต์ภายนอกใดๆ >>ขอบคุณที่ใช้<<
