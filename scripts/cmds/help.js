@@ -1,8 +1,8 @@
 this.config = {
 	name: "help",
-	version: "1.0.10",
+	version: "1.0.11",
 	author: {
-		name: "lnwsck",
+		name: "lnwbot",
 		contacts: ""
 	},
 	cooldowns: 5,
@@ -17,7 +17,7 @@ this.config = {
 
 module.exports = {
 	config: this.config,
-	start: async function ({ globalGoat, message, args, event, threadsData }) {
+	start: async function ({ globalGoat, message, args, event, threadsData, download }) {
 		const moment = require("moment-timezone");
 		const { statSync, existsSync, createReadStream } = require("fs-extra");
 		const axios = require("axios");
@@ -53,8 +53,8 @@ module.exports = {
 
 				msg += returnArray.reduce((text, item) => text += `【${++i}】 ${item.data}\n`, '');
 
-				const doNotDelete = "[ 😈 | clone by: lnwsck]";
-				message.reply(`${characters}\n${msg}${characters}\nTrang [ ${page}/${Math.ceil(arrayInfo.length / numberOfOnePage)} ]\nปัจจุบันบอทมี ${globalGoat.commands.size} คำสั่งที่ใช้งานได้\n► ${prefix}help <page number> เพื่อดูรายการคำสั่ง\n► ${prefix}help <command name> เพื่อดูรายละเอียดวิธีการใช้คำสั่งนั้น\n${characters}\n${doNotDelete}`);
+				const doNotDelete = "[ ✨ | เทพSCK โห้โครตเท่เลยพี่ ] \n ใช้ๆไปเถอะน้องขอร้องอยสกโดนเยสหรอ";
+				message.reply(`${characters}\n${msg}${characters}\nTrang [ ${page}/${Math.ceil(arrayInfo.length / numberOfOnePage)} ]\nปัจจุบันบอทมี ${globalGoat.commands.size} คำสั่งที่ใช้ได้\n► พิมพ์ ${prefix}help <page number> เพื่อดูรายการคำสั่ง\n► พิมพ์ ${prefix}help <command name> เพื่อดูรายละเอียดวิธีการใช้คำสั่งนั้น\n${characters}\n${doNotDelete}`);
 			}
 			else if (sortHelp == "category") {
 				for (const [name, value] of globalGoat.commands) {
@@ -70,9 +70,9 @@ module.exports = {
 					data.names.sort();
 					msg += `${categoryUpcase}\n${data.names.join(", ")}\n\n`;
 				}
-				const characters = "━━━━━━[SCK]━━━━━━━";
-				const doNotDelete = "[ 😈 | clone by: lnwsck]";
-				message.reply(`${msg}${characters}\n► ปัจจุบันบอทมี ${globalGoat.commands.size} คำสั่งที่ใช้งานได้ พิมพ์ ${prefix}help <command name> เพื่อดูรายละเอียดวิธีการใช้คำสั่งนั้น\n${characters}\n${doNotDelete}`);
+				const characters = "━━━━━━━━━━━━━";
+				const doNotDelete = "[ ♥ | Project lnwSCK โครตกามเลยพี่ ]";
+				message.reply(`${msg}${characters}\n► Hiện tại bot có ${globalGoat.commands.size} lệnh có thể sử dụng, gõ ${prefix}help <tên lệnh> để xem chi tiết cách sử dụng lệnh đó\n${characters}\n${doNotDelete}`);
 			}
 		}
 		// ———————————— COMMAND DOES NOT EXIST ———————————— //
@@ -106,10 +106,10 @@ module.exports = {
 				+ "\n" + nameUpperCase
 				+ "\n" + "━━━━━━━━━━━━━";
 
-			let msg = `${title}\n► หัวข้อ: ${configCommand.longDescription || "ไม่พร้อมใช้งาน"}`
+			let msg = `${title}\n► อธิบาย: ${configCommand.longDescription || "ไม่ว่าง"}`
 				+ `\n► Version: ${configCommand.version}`
 				+ `${configCommand.shortName ? `\n\n► ชื่ออื่น ๆ: ${typeof configCommand.shortName == "string" ? configCommand.shortName : configCommand.shortName.join(", ")}` : ""}`
-				+ `\n\n► Role: ${((configCommand.role == 0) ? "ผู้ใช้ทั้งหมด" : (configCommand.role == 1) ? "ผู้ดูแลกลุ่ม" : "บอทผู้ดูแลระบบ")}`
+				+ `\n\n► Role: ${((configCommand.role == 0) ? "ผู้ใช้ทั้งหมด" : (configCommand.role == 1) ? "ผู้ดูแลกลุ่ม" : "lnwsck")}`
 				+ `\n► เวลาในแต่ละครั้งโดยใช้คำสั่ง: ${configCommand.cooldowns || 1}s`
 				+ `\n► จำแนก: ${configCommand.category || "ไม่มีหมวดหมู่"}`
 				+ (author ? `\n► Author: ${author}` : "")
@@ -121,7 +121,7 @@ module.exports = {
 				body: guide
 			};
 			msg += '\n━━━━━━━━━━━━━\n'
-				+ '► คำแนะนำในการใช้งาน:\n'
+				+ '►คำแนะนำในการใช้งาน:\n'
 				+ guide.body
 					.replace(/\{prefix\}|\{p\}/g, prefix)
 					.replace(/\{name\}|\{n\}/g, configCommand.name)
